@@ -23,4 +23,4 @@ while True:
         model=model,
         messages=message
     )
-    print(chat_response.choices[0].message.content)
+    print("\n"+chat_response.choices[0].message.content + "\n")

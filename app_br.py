@@ -1,7 +1,7 @@
 from mistralai import Mistral
 from deep_translator import GoogleTranslator
 
-api_key = "api-key..." # https://console.mistral.ai/api-keys/
+api_key = "api-key..." # https://console.mistral.ai/api-keys/ 
 tradutor_br_en = GoogleTranslator(source= "pt", target= "en")
 tradutor_en_br = GoogleTranslator(source= "en", target= "pt")
 client = Mistral(api_key=api_key)
@@ -28,4 +28,4 @@ while True:
         messages=message
     )
     resposta = tradutor_en_br.translate(chat_response.choices[0].message.content)
-    print(resposta)
+    print("\n"+resposta +"\n")
